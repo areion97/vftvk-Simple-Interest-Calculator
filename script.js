@@ -5,8 +5,8 @@ function compute() {
 	var result = document.getElementById("result");
 	var calculation = 0;
 	
-	if(amount === undefined) alert("Please enter an amount")
-	if(amount <= 0) alert("Please enter a positive number");
+	if(amount === undefined) { alert("Please enter an amount"); return; }
+	if(amount <= 0) { alert("Please enter a positive number"); return; }
 	calculation = amount * interest / 100 * years;
 	var year = parseInt(new Date().getFullYear())+parseInt(years);
 	
