@@ -1,16 +1,32 @@
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://raw.githubusercontent.com/areion97/vftvk-Simple-Interest-Calculator/master/script.js"></script>
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/areion97/vftvk-Simple-Interest-Calculator/master/style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+		<div id="main-div">
+			<h1>Simple Interest Calculator</h1>
+			
+			<div id="form">
+				<label>Amount</label> <input type="number" id="principal">  
+				<br/>
+				<label>Interest Rate</label><input onchange="setInterestRate(this.value)" type="range" min="0" max="100" step="0.5" id="rate">
+				<p id="interest-rate">50%</p> 
+				<br/>
+				<label>No. of Years</label> <input type="number" id="years">  
+				<br/>
+				
+				<input id="button" onclick="compute()" type="submit" value="Compute Interest"/><br>
+				<p id="result"></p><br>
+			<div>
+		</div>
+		
+		
+		<footer>
+		
+			<p>© Everyone Can Get Rich</p>
+		
+		
+		</footer>
     </body>
 </html>
